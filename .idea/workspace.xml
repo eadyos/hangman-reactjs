@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../e2e_complex_scenario_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../ed/complete" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../payment_service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../payment_service_integration_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_event_service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_external_api_client" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_federated_payroll_integration_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_hub_downstream_integration_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_system_toggle_processor" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_test_executor" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../pi_test_framework_spreadsheet" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../policy_templates" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../stat_configuration_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../statutory_service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../statutory_service_integration_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../finances" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../temp/pi_external_api_client" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../temp/pi_test_framework_spreadsheet" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../tempt" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../test_automation" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../test_integration" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../us_policies_e2e_tests" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../us_policies_integration_tests" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TZavyh3FEXaDKNWoTbgt0Jqu4L" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="node" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
