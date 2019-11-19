@@ -1,3 +1,8 @@
+## About This Project
+
+This is a simple Hangman Game implemented in ReactJS.  It attempts to fetch a phrase from a web-service endpoint, but will fallback to a random word from a small pre-defined list when that service is unavailable.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
