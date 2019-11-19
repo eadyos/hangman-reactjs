@@ -12,11 +12,16 @@
 }
 
 .Hangman div.Title {
-
+  font-weight: bold;
   border-bottom: 1px solid #000;
   padding: 10px;
   margin-top: 0px;
   background-color: lightgreen;
+}
+
+.Hangman div.Phrase {
+  font-weight: bold;
+  font-family: "Courier New", monospace;
 }
 
 .Hangman div.congratulations {

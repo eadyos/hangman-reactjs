@@ -4,7 +4,7 @@ class Phrase extends React.Component {
 
     render() {
 
-        const phraseLetters = this.props.phrase.split("");
+        const phraseLetters = this.props.phrase != null ? this.props.phrase.split("") : [];
         const guessedLetters = this.props.guessedLetters;
         const phraseDisplay = phraseLetters.map((letter) => {
            return guessedLetters.includes(letter) ? letter :
@@ -12,7 +12,7 @@ class Phrase extends React.Component {
         }).join(" ");
 
         return (
-            <div>
+            <div className={"Phrase"}>
                 {phraseDisplay}
             </div>
         );

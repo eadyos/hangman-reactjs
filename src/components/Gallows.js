@@ -6,6 +6,7 @@ import gallowImage3 from './gallows3.jpg';
 import gallowImage4 from './gallows4.jpg';
 import gallowImage5 from './gallows5.jpg';
 import gallowImage6 from './gallows6.jpg';
+import winner from './winner.jpg';
 import './Gallows.css';
 
 class Gallows extends React.Component {
@@ -26,7 +27,9 @@ class Gallows extends React.Component {
 
     render() {
 
-        let gallowImage = this.state.gallowImages[this.props.incorrectGuessCount];
+        let gallowImage = this.props.isWon ? winner
+            : this.state.gallowImages[this.props.incorrectGuessCount];
+
         if(!gallowImage){
             gallowImage = gallowImage6;
         }

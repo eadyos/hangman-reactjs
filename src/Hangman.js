@@ -10,9 +10,30 @@ class Hangman extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            phrase: "HOT DOGS",
+            phrase: null,
             guessedLetters: [],
         }
+    }
+
+    componentDidMount() {
+        this.fetchWord()
+    }
+
+    fetchWord(){
+        fetch('http://localhost:3001')
+            .then(res => res.text())
+            .then(text => {
+                console.log(text);
+                this.setState({
+                    phrase : text.toUpperCase()
+                });
+            })
+            .catch((exception) => {
+                this.setState({
+                    phrase : "HAMBURGERS"
+                });
+                console.log(exception);
+            });
     }
 
     handleGuess(letter) {
@@ -26,13 +47,13 @@ class Hangman extends React.Component {
 
     handleNewGame() {
         this.setState({
-            phrase: "HAMBURGERS",
+            phrase: this.fetchWord(),
             guessedLetters: [],
         });
     }
 
     isWon() {
-        return this.state.phrase.split("").every((letter) =>
+        return this.state.phrase != null && this.state.phrase.split("").every((letter) =>
             this.state.guessedLetters.includes(letter) || letter === ' '
         );
     }
@@ -57,6 +78,7 @@ class Hangman extends React.Component {
                 <Title/>
                 <Gallows
                     incorrectGuessCount={incorrectGuessedLetters.length}
+                    isWon={this.isWon()}
                 />
                 <Phrase
                     phrase={this.state.phrase}
