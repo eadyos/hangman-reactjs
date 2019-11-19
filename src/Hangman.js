@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Hangman.css';
 import Title from './components/Title';
 import Gallows from "./components/Gallows";
 import Phrase from "./components/Phrase";
@@ -10,47 +10,47 @@ class Hangman extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            phrase : "HOT DOGS",
-            guessedLetters : [],
+            phrase: "HOT DOGS",
+            guessedLetters: [],
         }
     }
 
-    handleGuess(letter){
-        if(!this.state.guessedLetters.includes(letter)){
+    handleGuess(letter) {
+        if (!this.state.guessedLetters.includes(letter)) {
             this.state.guessedLetters.push(letter);
             this.setState({
-                guessedLetters : this.state.guessedLetters
+                guessedLetters: this.state.guessedLetters
             });
         }
     }
 
-    handleNewGame(){
+    handleNewGame() {
         this.setState({
-            phrase : "HAMBURGERS",
-            guessedLetters : [],
+            phrase: "HAMBURGERS",
+            guessedLetters: [],
         });
     }
 
-    isWon(){
+    isWon() {
         return this.state.phrase.split("").every((letter) =>
             this.state.guessedLetters.includes(letter) || letter === ' '
         );
     }
 
-    isLost(){
+    isLost() {
         return this.getIncorrectGuessedLetters().length >= 6;
     }
 
-    getIncorrectGuessedLetters(){
-        return this.state.guessedLetters.filter( letter =>
+    getIncorrectGuessedLetters() {
+        return this.state.guessedLetters.filter(letter =>
             !this.state.phrase.includes(letter)
         );
     }
 
     render() {
         const incorrectGuessedLetters = this.getIncorrectGuessedLetters();
-        const instructions = this.isWon() ? "Congratulations!" :
-            this.isLost() ? "Game Over." : "Guess a letter";
+        const message = this.isWon() ? <div className={"congratulations"}>Congratulations!</div> :
+            this.isLost() ? <div className={"gameover"}>Game Over</div> : "";
 
         return (
             <div className="Hangman">
@@ -58,13 +58,11 @@ class Hangman extends React.Component {
                 <Gallows
                     incorrectGuessCount={incorrectGuessedLetters.length}
                 />
-                <div>
-                    {instructions}
-                </div>
                 <Phrase
                     phrase={this.state.phrase}
                     guessedLetters={this.state.guessedLetters}
                 />
+                {message}
                 <UserInput
                     onGuess={(letter) => this.handleGuess(letter)}
                     gameActive={!this.isLost() && !this.isWon()}
@@ -72,7 +70,7 @@ class Hangman extends React.Component {
                 />
                 {
                     this.state.guessedLetters.length > 0 &&
-                        "Guessed Letters: " + this.state.guessedLetters.join("")
+                    "Guessed Letters: " + this.state.guessedLetters.join("")
                 }
             </div>
         );

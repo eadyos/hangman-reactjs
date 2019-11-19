@@ -32,7 +32,7 @@ class Gallows extends React.Component {
         }
 
         return (
-            <div className="Gallows-image">
+            <div className="Gallows">
                 <img src={gallowImage} alt="Gallows"/>
             </div>
         );

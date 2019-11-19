@@ -26,7 +26,7 @@ class UserInput extends React.Component {
 
     render() {
 
-        const guessLetterForm = <div>
+        const guessLetterForm = <div className={"UserInput"}>
             <form onSubmit={this.handleSubmit}>
                 <input
                     type="text"
@@ -38,7 +38,7 @@ class UserInput extends React.Component {
             </form>
         </div>;
 
-        const newGameButton = <div>
+        const newGameButton = <div className={"UserInput"}>
             <button onClick={this.props.onNewGame}>New Game</button>
         </div>;
 

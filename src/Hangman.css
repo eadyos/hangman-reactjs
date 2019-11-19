@@ -1,0 +1,34 @@
+.Hangman {
+  text-align: center;
+}
+
+.Hangman div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.UserInput {
+  margin-top: 10px;
+}
+
+.Hangman div.Title {
+
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  margin-top: 0px;
+  background-color: lightgreen;
+}
+
+.Hangman div.congratulations {
+  color: darkorchid;
+  font-weight: bolder;
+}
+
+.Hangman div.gameover {
+  color: darkred;
+  font-weight: bolder;
+}
+
+/*.Gallows {*/
+/*  text-align: center;*/
+/*}*/
